@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+    <form action="." method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        
+        {% if object %}
+        
+        <button type="submit" class="btn btn-warning">Editar</button>
+        {% else %}
+
+        <button type="submit" class="btn btn-success">Agregar</button>
+
+        {% endif %}
+        <a href="{% url 'core:list' %}" class="btn btn-link">Cancelar</a>
+            
+    </form>
+    
+{% endblock content %}
+    

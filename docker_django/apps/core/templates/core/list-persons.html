@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+    <h2>Listado de Personas</h2>
+
+    {% if persons %}
+    <ul>
+        {% for person in persons %}
+            <li>
+                {{ person }} <strong>{{ person.age }}</strong>
+                {% if person.photo %}
+                <p>
+                    <img src="{{ person.photo.url }}" alt="" srcset="">
+                </p>
+                {% endif %}
+                <a href="{% url 'core:update' person.id %}" class="btn btn-link">Editar</a>
+                <a href="{% url 'core:delete' person.id %}" class="btn btn-link">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <div class="alert alert-primary" role="alert">
+        Ninguna Persona Registrada
+    </div>
+    {% endif %}
+    <a href="{% url 'core:add' %}" class="btn btn-link">Agregar nuevo</a>
+    
+{% endblock content %}
+    

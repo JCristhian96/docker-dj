@@ -1,0 +1,17 @@
+# Enviorements
+.venv/
+docker_django/.env
+
+# Database Local
+docker_django/db.sqlite3
+
+# Static and Media Folders
+media/
+static/
+
+# Cache 
+*.pyc
+
+# Migrations
+docker_django/apps/core/migrations/*
+!docker_django/apps/core/migrations/__init__.py
