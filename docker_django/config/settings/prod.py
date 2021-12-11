@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ["*"]
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = db.SQLITE3
+DATABASES = db.POSTGRESQL
 
 
 # Static files (CSS, JavaScript, Images)
@@ -28,12 +28,3 @@ STATIC_ROOT = BASE_DIR.child('staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
 # MEDIA_ROOT = '/code/media/'
-
-
-# BASE_DIR2 = Path(__file__).ancestor(4)
-# print("*******************************")
-# print(BASE_DIR)
-# print("*******************************")
-# print("*******************************")
-# print(BASE_DIR2)
-# print("*******************************")

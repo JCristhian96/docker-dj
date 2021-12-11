@@ -3,7 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, CreateView, UpdateView, View
 # Models
 from .models import Person
-
+# Forms 
+from .forms import PersonForm
 
 class Index(TemplateView):
     template_name = "core/index.html"
@@ -23,7 +24,7 @@ class PersonListView(ListView):
 class PersonCreateView(CreateView):
     model = Person
     template_name = "core/form-person.html"
-    fields = "__all__"
+    form_class = PersonForm
     success_url = reverse_lazy("core:list")
     
     def get_context_data(self, **kwargs):
@@ -35,7 +36,7 @@ class PersonCreateView(CreateView):
 class PersonUpdateView(UpdateView):
     model = Person
     template_name = "core/form-person.html"
-    fields = "__all__"
+    form_class = PersonForm
     success_url = reverse_lazy("core:list")
     
     def get_context_data(self, **kwargs):
