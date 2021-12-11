@@ -1,5 +1,4 @@
 # Enviorements
-.venv/
 docker_django/.env
 
 # Database Local
@@ -8,6 +7,7 @@ docker_django/db.sqlite3
 # Static and Media Folders
 /media/
 /static/
+/staticfiles/
 
 # Cache 
 *.pyc
