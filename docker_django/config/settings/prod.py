@@ -18,11 +18,11 @@ DATABASES = db.SQLITE3
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR.child('static'),
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR.child('static'),
+]
 # STATIC_ROOT = BASE_DIR.child('staticfiles')
-STATIC_ROOT = '/code/static/'
+STATIC_ROOT = '/code/staticfiles/'
 
 
 MEDIA_URL = '/media/'
