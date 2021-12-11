@@ -21,10 +21,19 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR.child('static'),
 ]
-# STATIC_ROOT = BASE_DIR.child('staticfiles')
-STATIC_ROOT = '/code/staticfiles/'
+STATIC_ROOT = BASE_DIR.child('staticfiles')
+# STATIC_ROOT = '/code/staticfiles/'
 
 
 MEDIA_URL = '/media/'
-#MEDIA_ROOT = BASE_DIR.child('media')
-MEDIA_ROOT = '/code/media/'
+MEDIA_ROOT = BASE_DIR.child('media')
+# MEDIA_ROOT = '/code/media/'
+
+
+# BASE_DIR2 = Path(__file__).ancestor(4)
+# print("*******************************")
+# print(BASE_DIR)
+# print("*******************************")
+# print("*******************************")
+# print(BASE_DIR2)
+# print("*******************************")

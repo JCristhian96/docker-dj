@@ -9,6 +9,10 @@ docker_django/db.sqlite3
 /static/
 /staticfiles/
 
+docker_django/media
+docker_django/staticfiles
+
+
 # Cache 
 *.pyc
 

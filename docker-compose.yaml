@@ -9,8 +9,8 @@ services:
   django_app:
     build: .
     volumes:
-      - static:/code/staticfiles
-      - media:/code/media
+      - static:/code/docker_django/staticfiles
+      - media:/code/docker_django/media
       - .:/code
     depends_on:
       - db_postgres
@@ -18,11 +18,11 @@ services:
   nginx:
     image: nginx:1.13
     ports:
-      - "80:80"
+      - "8000:80"
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - static:/code/staticfiles
-      - media:/code/media
+      - static:/code/docker_django/staticfiles
+      - media:/code/docker_django/media
     depends_on:
       - django_app
 
